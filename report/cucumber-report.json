@@ -1,0 +1,215 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "dashboard-page;expand-and-collapse-module-on-dashboard",
+        "keyword": "Scenario Outline",
+        "line": 71,
+        "name": "Expand and collapse module on dashboard",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 336871666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 3,
+            "name": "user is on dashboard",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4607577207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 4,
+            "name": "I fill input \"email\" with \"mai.nguyen@yara.com\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 855565375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I click button \"Send login link\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:26"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 50116208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "I wait for magic link and navigate",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29783738083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "user should be on dashboard",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:108"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1071250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I click button to select tenant",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:111"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62247833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "I selects tenant \"Indonesia\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3387609709
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "I select last result \"24h\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:145"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3133241750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "I collapse project \"Yara Connect\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:207"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3055121541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "I expand project \"Yara Connect\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:201"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3087168749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "I expand module \"YC - Identity Management\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:213"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 10005496999,
+              "error_message": "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('//button[.//span[text()=\\'YC - Identity Management\\']]//span[@data-state-icon=\\'true\\']') to be visible\u001b[22m\n\n    at BaseDashboard.clickExpandModule (/Users/nguyenthimai/code/Auto_OIP/OIP_E2E/src/pages/baseDashboard.ts:241:18)\n    at CustomWorld.<anonymous> (/Users/nguyenthimai/code/Auto_OIP/OIP_E2E/src/steps/baseDashboardSteps.ts:214:28)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "I collapse module \"YC - Identity Management\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:219"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 67,
+            "name": "I collapse project \"Yara Connect\"",
+            "match": {
+              "location": "src/steps/baseDashboardSteps.ts:207"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 42519625
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ExpandCollapseModule",
+            "line": 59
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "dashboard-page",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Dashboard Page",
+    "tags": [],
+    "uri": "src/features/dashboard/oip_DasDashboard.feature"
+  }
+]
