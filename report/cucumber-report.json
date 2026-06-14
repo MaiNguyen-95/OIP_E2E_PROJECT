@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 180899899
+              "duration": 174745699
             }
           },
           {
@@ -26,8 +26,9 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
             },
             "result": {
-              "status": "passed",
-              "duration": 16172226299
+              "status": "failed",
+              "duration": 3268099,
+              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
             }
           },
           {
@@ -39,8 +40,8 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:16"
             },
             "result": {
-              "status": "passed",
-              "duration": 586901900
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -52,8 +53,8 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:20"
             },
             "result": {
-              "status": "passed",
-              "duration": 3401360000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -65,8 +66,8 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:28"
             },
             "result": {
-              "status": "passed",
-              "duration": 2150987699
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -78,8 +79,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:32"
             },
             "result": {
-              "status": "passed",
-              "duration": 2543054000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -87,7 +88,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42103399
+              "duration": 40383000
             }
           }
         ],
@@ -111,7 +112,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 169558199
+              "duration": 151844000
             }
           },
           {
@@ -123,8 +124,9 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
             },
             "result": {
-              "status": "passed",
-              "duration": 14269948000
+              "status": "failed",
+              "duration": 1010800,
+              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
             }
           },
           {
@@ -136,8 +138,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:3"
             },
             "result": {
-              "status": "passed",
-              "duration": 2548115799
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -149,8 +151,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
             },
             "result": {
-              "status": "passed",
-              "duration": 23804100
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -158,7 +160,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 44433300
+              "duration": 37172799
             }
           }
         ],
@@ -182,7 +184,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 138573700
+              "duration": 156242999
             }
           },
           {
@@ -194,8 +196,9 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
             },
             "result": {
-              "status": "passed",
-              "duration": 15348337800
+              "status": "failed",
+              "duration": 1450199,
+              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
             }
           },
           {
@@ -207,8 +210,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:3"
             },
             "result": {
-              "status": "passed",
-              "duration": 2440485499
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -220,8 +223,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
             },
             "result": {
-              "status": "passed",
-              "duration": 20887500
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -233,8 +236,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:11"
             },
             "result": {
-              "status": "passed",
-              "duration": 36077799
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -246,8 +249,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
             },
             "result": {
-              "status": "passed",
-              "duration": 255883600
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -255,7 +258,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39958200
+              "duration": 33810099
             }
           }
         ],
@@ -279,7 +282,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 160563099
+              "duration": 150612699
             }
           },
           {
@@ -291,8 +294,9 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
             },
             "result": {
-              "status": "passed",
-              "duration": 14151962300
+              "status": "failed",
+              "duration": 1204400,
+              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
             }
           },
           {
@@ -304,8 +308,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:3"
             },
             "result": {
-              "status": "passed",
-              "duration": 3440911000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -317,8 +321,8 @@
               "location": "src\\steps\\dynamicSteps\\baseSteps.ts:36"
             },
             "result": {
-              "status": "passed",
-              "duration": 2064633600
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -330,8 +334,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:11"
             },
             "result": {
-              "status": "passed",
-              "duration": 57788000
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -343,8 +347,8 @@
               "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
             },
             "result": {
-              "status": "passed",
-              "duration": 266545599
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -352,7 +356,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 22426900
+              "duration": 30690300
             }
           }
         ],
