@@ -34,10 +34,6 @@ export class BasePage {
     this.page.locator(
       `xpath=(//div[@data-testid="${datatestid}"]//button[normalize-space()="${timerange}"])[1]`,
     );
-  clickbarchart = (barchart: string, barchartindex: number) =>
-    this.page.locator(
-      `xpath=(//span[contains(.,'${barchart}')]/following::div[@data-state='closed' and contains(@class,'cursor-pointer')])[${barchartindex}]`,
-    );
   selectboxfilter = (submodule: string, color: string) =>
     this.page.locator(
       `xpath=//button[contains(.,'${submodule}')]//div[contains(@class,'${color}')]`,
@@ -52,6 +48,7 @@ export class BasePage {
     this.page.locator(
       `xpath=(//form//button[.//span[normalize-space()='${filter}']])`,
     );
+
   //#endregion
   //#region Actions
   // URL navigation
@@ -81,16 +78,6 @@ export class BasePage {
     const button = this.btncombobox(flag);
     await button.waitFor({ state: "visible", timeout: 5000 });
     await button.click();
-  }
-  //Click to select incident detail
-  async selectDropdownByText(
-    selectId: string,
-    optionText: string | null,
-  ): Promise<void> {
-    if (!optionText) return;
-    const select = this.page.locator(`select#${selectId}`);
-    await select.waitFor({ state: "visible" });
-    await select.selectOption({ label: optionText });
   }
   //Click to open dropdown filter
   async clickFilter(datatestid: string): Promise<void> {
@@ -132,28 +119,7 @@ export class BasePage {
     await input.waitFor({ state: "visible" });
     await input.fill(value);
   }
-  //Click any barchart in dashboard by module name
-  async clickBarchart(barchart: string, barchartindex: number): Promise<void> {
-    const button = this.clickbarchart(barchart, barchartindex);
-    await button.waitFor({ state: "visible", timeout: 10000 });
-    await button.click();
-  }
-  //Click filter "Total pending lag/Critical Issues"
-  async clickBtnTotalPendingLag(text: string): Promise<void> {
-    const button = this.btntopic(text);
-    await button.waitFor({ state: "visible", timeout: 10000 });
-    await button.click();
-  }
-  //Click to open checkbox list tenant
-  async clickBtnOpenDropdownListTenant(text: string): Promise<void> {
-    const button = this.btnOpenDropdownListTenant(text);
-    await button.waitFor({ state: "visible", timeout: 10000 });
-    await button.click();
-  }
-  // Verify the filter displays the number of selected countries
-  async verifyCountryFilter(expected: string): Promise<void> {
-    await expect(this.btnOpenDropdownListTenant(expected)).toHaveText(expected);
-  }
+
   //#endregion
 }
 
