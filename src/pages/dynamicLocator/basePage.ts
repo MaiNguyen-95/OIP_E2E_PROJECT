@@ -28,7 +28,7 @@ export class BasePage {
     );
   btnfilter = (datatestid: string) =>
     this.page.locator(
-      `xpath=(//div[@data-testid="${datatestid}"]//button[@type="button" and @role="combobox"])`,
+      `xpath=(//div[@data-testid="${datatestid}"]//button[@role="combobox"])`,
     );
   timerange = (datatestid: string, timerange: string) =>
     this.page.locator(
@@ -40,6 +40,7 @@ export class BasePage {
     );
   expandService = (expandservice: string) =>
     this.page.locator(`xpath=(//span[.="${expandservice}"]/../button)`);
+
   btntopic = (text: string) =>
     this.page.locator(
       `xpath=(//div//p[normalize-space()='${text}']/ancestor::div[contains(@class,'cursor-pointer')])`,

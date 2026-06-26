@@ -46,6 +46,23 @@ export class BaseDashboard {
       },
     );
   }
+
+  private normalizeUptimeColor(cssColor: string): string {
+    const map: Record<string, string> = {
+      "rgb(243, 86, 37)": "red", // < 98%
+      "rgb(245, 158, 11)": "orange", // 98% - 99%
+      "rgb(40, 202, 158)": "green", // >= 99%
+    };
+    return map[cssColor] ?? "unknown";
+  }
+
+  // Percent → expected color theo business rule (red, orange, green)
+  private getExpectedUptimeColor(percentage: number): string {
+    if (percentage < 98) return "red";
+    if (percentage < 99) return "orange";
+    return "green";
+  }
+
   //#region Locators
   btntopservice = (datatestid: string, text: string) =>
     this.page.locator(
@@ -59,6 +76,17 @@ export class BaseDashboard {
       .locator('[data-testid="uptime-item"]', { hasText: timeLabel })
       .locator("span")
       .last();
+  //header
+  logoImage = () => this.page.locator('xpath=//img[@alt="Logo"]');
+  logoText = () => this.page.locator('xpath=//span[@class="text-[#00205C]"]');
+  userName = () =>
+    this.page.locator(
+      'xpath=//span[@class="text-sm font-medium text-gray-700"]',
+    );
+  userEmail = () =>
+    this.page.locator('xpath=//span[@class="text-xs text-neutral-500"]');
+  logoutButton = () => this.page.locator('xpath=//button[text()="Logout"]');
+
   //#endregion
   //#region Actions
   //Click to open top service popup
@@ -146,6 +174,57 @@ export class BaseDashboard {
     expect(uiP95Num).toBeLessThanOrEqual(apiP95Summary + 2);
     expect(uiP99Num).toBeGreaterThanOrEqual(apiP99Summary - 2);
     expect(uiP99Num).toBeLessThanOrEqual(apiP99Summary + 2);
+  }
+
+  //verify logo
+  async verifyLogo(): Promise<void> {
+    await expect(this.logoImage()).toBeVisible();
+  }
+  //verify logo text
+  async verifyLogoText(): Promise<void> {
+    await expect(this.logoText()).toHaveText("DVCS Ops Insights");
+  }
+
+  //Verify username and email
+  async verifyUserFullName(expectedName: string): Promise<void> {
+    await expect(this.userName()).toHaveText(expectedName);
+  }
+
+  async verifyUserEmail(expectedEmail: string): Promise<void> {
+    await expect(this.userEmail()).toHaveText(expectedEmail);
+  }
+
+  //Verify logout button is visible
+  async verifyLogoutButton(): Promise<void> {
+    await expect(this.logoutButton()).toBeVisible();
+  }
+
+  // Verify UI Uptime overall
+  // Verify color of all uptime periods
+  async verifyAllUptimeColors(): Promise<void> {
+    const timePeriods = ["Last 1h", "Last 24h", "Last 7d", "Last 30d"];
+
+    for (const period of timePeriods) {
+      // use locator to get the value
+      const valueSpan = this.uptimeValueByTime(period);
+      await valueSpan.waitFor({ state: "visible", timeout: 10000 });
+
+      // get text content of the value
+      const valueText = (await valueSpan.textContent()) ?? "";
+      const percentage = parseFloat(valueText.replace("%", ""));
+      const cssColor = await valueSpan.evaluate(
+        (el) => (el as HTMLElement).style.color,
+      );
+
+      const actualColor = this.normalizeUptimeColor(cssColor);
+      const expectedColor = this.getExpectedUptimeColor(percentage);
+
+      console.log(
+        `[Uptime] ${period}: ${percentage}% → color: ${actualColor} (expected: ${expectedColor})`,
+      );
+
+      expect(actualColor).toBe(expectedColor);
+    }
   }
   //#endregion
 }

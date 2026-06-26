@@ -4,56 +4,69 @@
     "elements": [
       {
         "description": "",
-        "id": "overall-dashboard;select-overall-availability-filter",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Select overall availability filter",
+        "id": "header-dashboard;verify-user-info-in-header",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Verify user info in header",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 317314875
+              "duration": 397248957
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 12,
             "name": "I select tenant \"Thailand\" when clicking \"Flag of Ghana\"",
             "match": {
               "location": "src/steps/dynamicSteps/baseSteps.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 19773932082
+              "duration": 17663908290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the user name should display \"Mai Nguyen\"",
+            "match": {
+              "location": "src/steps/dashboard/baseDashboardSteps.ts:59"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5588250
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 6,
-            "name": "I click filter \"overall-availability-section\"",
+            "line": 14,
+            "name": "the user email should display \"mai.nguyen@yara.com\"",
             "match": {
-              "location": "src/steps/dynamicSteps/baseSteps.ts:17"
+              "location": "src/steps/dashboard/baseDashboardSteps.ts:66"
             },
             "result": {
               "status": "passed",
-              "duration": 273627250
+              "duration": 2886333
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 7,
-            "name": "I selects \"Yara Farmcare\" option on filter",
+            "line": 15,
+            "name": "the logout button should be visible",
             "match": {
-              "location": "src/steps/dynamicSteps/baseSteps.ts:21"
+              "location": "src/steps/dashboard/baseDashboardSteps.ts:73"
             },
             "result": {
               "status": "passed",
-              "duration": 3333191749
+              "duration": 1924624
             }
           },
           {
@@ -61,24 +74,32 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 42503541
+              "duration": 39670540
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1149332
             }
           }
         ],
         "tags": [
           {
-            "name": "@OverallAvailability",
-            "line": 3
+            "name": "@UserInfoVerification",
+            "line": 10
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "overall-dashboard",
+    "id": "header-dashboard",
     "line": 1,
     "keyword": "Feature",
-    "name": "Overall Dashboard",
+    "name": "Header dashboard",
     "tags": [],
-    "uri": "src/features/dashboard/overall.feature"
+    "uri": "src/features/dashboard/header.feature"
   }
 ]

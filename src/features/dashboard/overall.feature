@@ -1,10 +1,16 @@
 Feature: Overall Dashboard
 
     @OverallAvailability
-    Scenario: Select overall availability filter
+    Scenario Outline: Verify uptime colors for each DVCS option
         Given I select tenant "Thailand" when clicking "Flag of Ghana"
         And I click filter "overall-availability-section"
         And I selects "<option>" option on filter
+        Then all uptime period colors should match their percentage thresholds
+
         Examples:
-            | option        |
-            | Yara Farmcare |
+            | option              |
+            | All DVCS            |
+            | Yara Connect        |
+            | Yara Farmcare       |
+            | Admin Portal Webapp |
+            | Heartbeat           |
