@@ -1,4 +1,4 @@
-Feature: Overall Dashboard
+Feature: Overall on Dashboard
 
     @OverallAvailability
     Scenario Outline: Verify uptime colors for each DVCS option

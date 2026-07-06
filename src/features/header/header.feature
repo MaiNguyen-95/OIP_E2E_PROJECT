@@ -1,6 +1,5 @@
 Feature: Header dashboard
 
-
     @LogoVerification
     Scenario: Verify logo and app title
         Given I select tenant "Thailand" when clicking "Flag of Ghana"

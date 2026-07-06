@@ -6,7 +6,7 @@
         "description": "",
         "id": "header-dashboard;verify-user-info-in-header",
         "keyword": "Scenario Outline",
-        "line": 19,
+        "line": 18,
         "name": "Verify user info in header",
         "steps": [
           {
@@ -14,59 +14,59 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 397248957
+              "duration": 186066415
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 12,
+            "line": 11,
             "name": "I select tenant \"Thailand\" when clicking \"Flag of Ghana\"",
             "match": {
               "location": "src/steps/dynamicSteps/baseSteps.ts:45"
             },
             "result": {
               "status": "passed",
-              "duration": 17663908290
+              "duration": 32893868084
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 13,
+            "line": 12,
             "name": "the user name should display \"Mai Nguyen\"",
             "match": {
               "location": "src/steps/dashboard/baseDashboardSteps.ts:59"
             },
             "result": {
               "status": "passed",
-              "duration": 5588250
+              "duration": 6546083
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 14,
+            "line": 13,
             "name": "the user email should display \"mai.nguyen@yara.com\"",
             "match": {
               "location": "src/steps/dashboard/baseDashboardSteps.ts:66"
             },
             "result": {
               "status": "passed",
-              "duration": 2886333
+              "duration": 3293624
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 15,
+            "line": 14,
             "name": "the logout button should be visible",
             "match": {
               "location": "src/steps/dashboard/baseDashboardSteps.ts:73"
             },
             "result": {
               "status": "passed",
-              "duration": 1924624
+              "duration": 1351290
             }
           },
           {
@@ -74,7 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 39670540
+              "duration": 21066749
             }
           },
           {
@@ -82,14 +82,14 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1149332
+              "duration": 1096958
             }
           }
         ],
         "tags": [
           {
             "name": "@UserInfoVerification",
-            "line": 10
+            "line": 9
           }
         ],
         "type": "scenario"
