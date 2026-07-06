@@ -4,83 +4,69 @@
     "elements": [
       {
         "description": "",
-        "id": "latency-on-dashboard;latency",
+        "id": "header-dashboard;verify-user-info-in-header",
         "keyword": "Scenario Outline",
-        "line": 12,
-        "name": "Latency",
+        "line": 19,
+        "name": "Verify user info in header",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 174745699
+              "duration": 397248957
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
+            "line": 12,
             "name": "I select tenant \"Thailand\" when clicking \"Flag of Ghana\"",
             "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
+              "location": "src/steps/dynamicSteps/baseSteps.ts:45"
             },
             "result": {
-              "status": "failed",
-              "duration": 3268099,
-              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 6,
-            "name": "I click filter \"latency-section\"",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:16"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 7,
-            "name": "I selects \"Yara Connect\" option on filter",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:20"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 8,
-            "name": "I select \"7d\" timerange \"latency-section\"",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:28"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 17663908290
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 9,
-            "name": "I verify both \"95th\" and \"99th\" latency metrics for \"7d\" timerange on card \"mean-latency-card\" match API",
+            "line": 13,
+            "name": "the user name should display \"Mai Nguyen\"",
             "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:32"
+              "location": "src/steps/dashboard/baseDashboardSteps.ts:59"
             },
             "result": {
-              "status": "skipped",
-              "duration": 0
+              "status": "passed",
+              "duration": 5588250
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "the user email should display \"mai.nguyen@yara.com\"",
+            "match": {
+              "location": "src/steps/dashboard/baseDashboardSteps.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2886333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "the logout button should be visible",
+            "match": {
+              "location": "src/steps/dashboard/baseDashboardSteps.ts:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1924624
             }
           },
           {
@@ -88,71 +74,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 40383000
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@verifylatencywithfilter",
-            "line": 3
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "latency-on-dashboard;open-popup-top-services-latency",
-        "keyword": "Scenario",
-        "line": 22,
-        "name": "Open popup top services latency",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 151844000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 17,
-            "name": "I select tenant \"Thailand\" when clicking \"Flag of Ghana\"",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 1010800,
-              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 18,
-            "name": "From \"latency-section\" I click \"View all services\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:3"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 19,
-            "name": "I verify popup is \"open\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
+              "duration": 39670540
             }
           },
           {
@@ -160,220 +82,24 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 37172799
+              "duration": 1149332
             }
           }
         ],
         "tags": [
           {
-            "name": "@verifypopuptopservicesopen",
-            "line": 15
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "latency-on-dashboard;close-popup-top-services-latency",
-        "keyword": "Scenario",
-        "line": 34,
-        "name": "Close popup top services latency",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 156242999
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 27,
-            "name": "I select tenant \"Thailand\" when clicking \"Flag of Ghana\"",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 1450199,
-              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 28,
-            "name": "From \"latency-section\" I click \"View all services\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:3"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 29,
-            "name": "I verify popup is \"open\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 30,
-            "name": "I click to \"Close\" button to close popup Services latency",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:11"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 31,
-            "name": "I verify popup is \"closed\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 33810099
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@verifypopuptopservicesclosed",
-            "line": 25
-          }
-        ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "latency-on-dashboard;list-api-of-service",
-        "keyword": "Scenario",
-        "line": 46,
-        "name": "List API of service",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 150612699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 39,
-            "name": "I select tenant \"Thailand\" when clicking \"Flag of Ghana\"",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:44"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 1204400,
-              "error_message": "page.goto: url: expected string, got undefined\n    at BasePage.goto (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\pages\\dynamicLocator\\basePage.ts:59:21)\n    at CustomWorld.<anonymous> (C:\\Users\\Ngoc Huyen\\Documents\\github cucumber\\auto-oip\\Automation-E2E-OIP\\OIP_E2E_PROJECT\\src\\steps\\dynamicSteps\\baseSteps.ts:48:25)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 40,
-            "name": "From \"latency-section\" I click \"View all services\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:3"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 41,
-            "name": "I click to expand list of service at \"yc-loyalty\"",
-            "match": {
-              "location": "src\\steps\\dynamicSteps\\baseSteps.ts:36"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 42,
-            "name": "I click to \"Close\" button to close popup Services latency",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:11"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 43,
-            "name": "I verify popup is \"closed\"",
-            "match": {
-              "location": "src\\steps\\dashboard\\baseDashboardSteps.ts:18"
-            },
-            "result": {
-              "status": "skipped",
-              "duration": 0
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 30690300
-            }
-          }
-        ],
-        "tags": [
-          {
-            "name": "@verifylistAPIofservice",
-            "line": 37
+            "name": "@UserInfoVerification",
+            "line": 10
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "latency-on-dashboard",
+    "id": "header-dashboard",
     "line": 1,
     "keyword": "Feature",
-    "name": "Latency on Dashboard",
+    "name": "Header dashboard",
     "tags": [],
-    "uri": "src\\features\\dashboard\\latency.feature"
+    "uri": "src/features/dashboard/header.feature"
   }
 ]

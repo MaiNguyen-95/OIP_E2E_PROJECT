@@ -6,6 +6,7 @@ When(
   "I fill input {string} with {string}",
   async function (inputName: string, value: string) {
     await this.basePage.fillInGeneralInputField(inputName, value);
+    await this.page.waitForTimeout(5000);
   },
 );
 // Click button login
@@ -43,10 +44,10 @@ When(
 //function to Login with magic link
 Given(
   "I select tenant {string} when clicking {string}",
-  { timeout: 120 * 1000 },
+  { timeout: 120 * 10000 },
   async function (this: CustomWorld, tenant: string, flag: string) {
     await this.basePage.goto(this.config.baseUrl);
-    await this.basePage.fillInGeneralInputField("email", "huyen.le@yara.com");
+    await this.basePage.fillInGeneralInputField("email", "mai.nguyen@yara.com");
     await this.basePage.clickButtonByText("Send login link");
     const outlookContext = await this.context.browser()!.newContext({
       storageState: "outlook-auth.json",

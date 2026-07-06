@@ -36,3 +36,9 @@ After(async function (this: CustomWorld) {
 AfterAll(async function () {
   await browser?.close();
 });
+
+After(async function (this: CustomWorld) {
+  await this.page?.unrouteAll({ behavior: "ignoreErrors" }); // thêm dòng này
+  await this.page?.close();
+  await this.context?.close();
+});
